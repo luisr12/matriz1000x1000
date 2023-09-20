@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        criarMatriz=(row, col)=>{
+    let matriz=[];
+
+    for (let i = 0; i < row; i++) {
+        matriz[i] = []; // Crie uma matriz interna antes de atribuir valores a ela
+        for (let j = 0; j < col; j++) {
+            matriz[i][j] = 0;
+        } // Acrescentar o foreach para melhorar
+    }
+
+    return matriz;
+
+}
+
+
+const inicio = new Date();  // Registrar o momento de início
+
+const matriz1000x1000 = criarMatriz(1000, 1000);
+
+const fim = new Date(); // Registrar o momento de término
+
+const tempoDecorrido = (fim - inicio) / 1000; // Calcular o tempo decorrido em segundos
+
+console.log(matriz1000x1000);
+
+console.log(`Tempo decorrido: ${tempoDecorrido} segundos`);
+
+    </script>
+</body>
+</html>
